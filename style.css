@@ -1,0 +1,114 @@
+body {
+  height: 100%;
+  background: #ffd89b; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ffd89b, #19547b); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ffd89b, #19547b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.container {
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	left: 50%;
+	text-align: center;
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+
+.modal__overlay {
+	display: none;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background-color: rgba(0,0,0,.4);
+	z-index: 1000;
+}
+
+.modal__overlay--active {
+	display: block;
+}
+
+.modal__container {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+    background: radial-gradient(#4686e6, #5473a2);
+	color: #fff;
+    box-shadow: 1px 1px 116px #333;
+	display: none;
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+	opacity: 0;
+	transform: translate(-50%,-50%) scale(0.7);
+}
+
+.modal__overlay--active > .modal__container {
+	animation: modalContainerFadeIn .3s ease-in 1 forwards;
+}
+
+@keyframes modalContainerFadeIn {
+  to {
+  	transform: scale(1) translate(-50%,-50%);
+    opacity: 1;
+  }
+}
+
+.modal__title,
+.modal__body,
+.modal__footer {
+	padding: 1rem 2rem;
+}
+
+.modal__title {
+	margin: 0;
+	font-size: 1.8rem;
+	padding-top: 2rem;
+}
+
+.modal__footer {
+	padding-bottom: 2rem;
+}
+
+.modal__button {
+	cursor: pointer;
+    font-size: 1.3rem;
+    background-color: #28508c;
+    color: #fff;
+    border: none;
+    padding: .5rem 2rem;
+    transition: background-color .3s;
+}
+.modal__button:hover {
+	background-color: #203758;
+}

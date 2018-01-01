@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Guilherme Soldateli - Modal</title>
+
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<h1 class="title">MODAL</h1>
+		<button class="btn" data-modal-open="search">Click here to open modal</button>
+	</div>
+
+	<div data-modal-id="search" class="modal__container">
+		<h4 class="modal__title">Sorry! Search is not available! :( </h4>
+		<div class="modal__body">
+			As soon as possible this amazing search will be running.
+		</div>
+		<div class="modal__footer">
+			<button data-close class="modal__button">Close</button>
+		</div>
+	</div>	
+
+	<script src="script.js"></script>
+</body>
+</html>
