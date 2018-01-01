@@ -1,5 +1,5 @@
-# E-card
+# Modal
 
-This is a web business card component.
+This is modal component.
 
-You may see it working [Here](https://gsoldateli.github.io/e-card/)
+You may see it working [Here](https://gsoldateli.github.io/modal/)
